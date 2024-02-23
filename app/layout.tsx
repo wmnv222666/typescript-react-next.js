@@ -4,8 +4,8 @@ import Footer from '@/components/Footer';
 
 
 export const metadata = {
-  title: "Flexibble",
-  description: "Showcase and discover remarkable developer projects",
+  title: "wei react project",
+  description: "Showcase",
 };
 
 export default function RootLayout({
@@ -15,12 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     //setup loyout
-    <body>
-      <Navbar />
-      <main>
+    <html lang='en'>
+      <body className='relative'>
+        <Navbar />
         {children}
-      </main>
-      <Footer />
-    </body>
+        <Footer />
+      </body>
+    </html>
   );
 }

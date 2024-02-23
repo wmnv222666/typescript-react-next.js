@@ -1,62 +1,33 @@
 import Link from 'next/link'
 import React from 'react'
 import Image from "next/image";
-import { NavLinks } from "@/constant";
-import AuthProviders from './AuthProviders';
+import CustomButton from './CustomButton';
 
 const Navbar = async () => {
-    //set up a session 
-    const session = {}
     
     return (
-        <nav className='flexBetween navbar'>
-            <div className='flex-1 flexStart gap-10'>
-                <Link href='/'>
+        <header className='w-full  absolute z-10'>
+            <nav className='max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-transparent'>
+                <Link href='/' className='flex justify-center items-center'>
                     <Image
                         src='/logo.jpg'
-                        width={86}
-                        height={23}
                         alt='logo'
+                        width={78}
+                        height={18}
+                        className='object-contain'
                     />
                 </Link>
-                <ul className='xl:flex hidden text-small gap-7'>
-                    {/* {NavLinks.map((link) =>
-                    {
-                        console.log(link); // print link
-                        return(
-                            <Link href={link.href} key={link.text}>
-                                {link.text}
-                            </Link>
-                        );
-                    })} */}
-                    {NavLinks.map((link) => (
-                        <Link href={link.href} key={link.text}>
-                            {link.text}
-                        </Link>
-                    ))}
-                </ul>
-            </div>
 
-            <div className='flexCenter gap-4'>
-                {/* when login  or session exit will be show div it's not exit will be show the  AuthProviders*/}
-                {session? (
-                    <>
-                        {/* <ProfileMenu session={session} /> */}
-
-                        <Link href="/create-project">
-                            {/* <Button title='Share work' /> */}
-                        </Link>
-                    </>
-                ) : (
-                    <AuthProviders />
-                )}
-            </div>
-        </nav>
+                <CustomButton
+                    title='Sign in'
+                    btnType='button'
+                    containerStyles='text-primary-blue rounded-full bg-white min-w-[130px]'
+                />
+            </nav>
+        </header>
   )
 }
 
 export default Navbar
 
-function getCurrentUser() {
-    throw new Error('Function not implemented.');
-}
+

@@ -5,6 +5,7 @@ import { NavLinks } from "@/constant";
 import AuthProviders from './AuthProviders';
 
 const Navbar = async () => {
+    //set up a session 
     const session = {}
     
     return (
@@ -37,6 +38,7 @@ const Navbar = async () => {
             </div>
 
             <div className='flexCenter gap-4'>
+                {/* when login  or session exit will be show div it's not exit will be show the  AuthProviders*/}
                 {session? (
                     <>
                         {/* <ProfileMenu session={session} /> */}

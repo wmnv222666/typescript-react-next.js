@@ -4,6 +4,7 @@ First,
 2.npm install @headlessui/react cloudinary jsonwebtoken @types/jsonwebtoken graphql-request next-auth
  (ui libary)
 3.npm install @grafbase/sdk --save-dev
+npx grafbase init
 ```bash
 npm run dev
 # or

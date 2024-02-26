@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
-import SearchBar from "../components/CustomFilter"
 import CustomFilter from "../components/CustomFilter"
+import SearchBar from "../components/Searchbar"
 const Home = () => {
   return (
     <main className='overflow-hidden'>

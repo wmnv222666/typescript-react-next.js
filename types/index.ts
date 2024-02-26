@@ -64,5 +64,7 @@ export interface ShowMoreProps {
 
 export interface SearchManuFacturerProps {
   manufacturer: string;
-  setManuFacturer: (manufacturer: string) => void;
+  setManuFacturer: (manufacturer: string) => void;//Indicates that the function does not return a value
+
+
 }

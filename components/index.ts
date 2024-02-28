@@ -1,19 +1,21 @@
-// import CarCard from "./CarCard";
+import DrinkCard from "./DrinkCard";
 import CustomButton from "./CustomButton";
-// import CustomFilter from "./CustomFilter";
+import CustomFilter from "./CustomFilter";
 import Footer from "./Footer";
-// import NavBar from "./Navbar";
-// import ShowMore from "./ShowMore";
-// import SearchBar from "./Searchbar";
+import NavBar from "./Navbar";
+import ShowMore from "./ShowMore";
+import SearchBar from "./Searchbar";
 import Hero from "./Hero";
+import SearchManufacturer from "./SearchManufacturer";
 
 export {
     Hero,
-    // CarCard,
+    DrinkCard,
     CustomButton,
-    // CustomFilter,
+    CustomFilter,
     Footer,
-    // NavBar,
-    // ShowMore,
-    // SearchBar,
+    NavBar,
+    ShowMore,
+    SearchBar,
+    SearchManufacturer,
 };

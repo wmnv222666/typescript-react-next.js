@@ -1,6 +1,6 @@
 
 // utils/index.ts
-
+import { CarProps } from '@/types';
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a';
 export const fetchDrinks = async () => {
   // await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -13,6 +13,20 @@ export const fetchDrinks = async () => {
   return data
 };
 
+const url1 = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=';
+export const getSingleDrink = async (idDrink:string) => {
+  const res = await fetch(`${url1}${idDrink}`);
+  if (!res.ok) {
+    throw new Error('Failed to fetch drink');
+  }
+
+  console.log('Response status:', res.status);
+
+  const data = await res.json();
+  console.log('Response data:', data);
+
+  return data;
+};
 
 
 

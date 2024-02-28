@@ -4,13 +4,13 @@ import CustomFilter from "../components/CustomFilter"
 import SearchBar from "../components/Searchbar"
 import { fetchDrinks } from "@/utils";
 import DrinkCard from "@/components/DrinkCard";
+import { ShowMore } from "@/components";
 
 
 const Home = async () => {
   const allDrink = await fetchDrinks()
   // console.log(allDrink,"getallDrink")
   // const isDataEmpty = !Array.isArray(allDrink) || allDrink.length < 1 || !allDrink;
-  const isDataEmpty = !Array.isArray(allDrink) || allDrink.length === 0
   return (
     <main className='overflow-hidden'>
       <Hero/>
@@ -30,8 +30,6 @@ const Home = async () => {
             <CustomFilter/>
           </div>
         </div>
-
-        {!isDataEmpty ? (
           <section>
             <div className='home__cars-wrapper'>
             {allDrink.drinks?.map((car, index) =>(
@@ -39,21 +37,12 @@ const Home = async () => {
                   ))}
             </div>
 
-            {/* <ShowMore
-              pageNumber={(searchParams.limit || 10) / 10}
-              isNext={(searchParams.limit || 10) > allDrink.length}
-            /> */}
+            <ShowMore
+              // pageNumber={(searchParams.limit || 10) / 10}
+              // isNext={(searchParams.limit || 10) > allDrink.length}
+            />
           </section>
-       ) 
-        : (
-          <div className='home__error-container'>
-            <h2 className='text-black text-xl font-bold'>Oops, no results</h2>
-            <p>{allDrink?.message}</p>
-          </div> 
-        )} 
       </div>
-
-   
       </main>
 
   );

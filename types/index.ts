@@ -1,18 +1,22 @@
 import { MouseEventHandler } from "react";
 
 export interface CarProps {
-  city_mpg: number;
-  class: string;
-  combination_mpg: number;
-  cylinders: number;
-  displacement: number;
-  drive: string;
-  fuel_type: string;
-  highway_mpg: number;
-  make: string;
-  model: string;
-  transmission: string;
-  year: number;
+  // city_mpg: number;
+  // class: string;
+  // combination_mpg: number;
+  // cylinders: number;
+  // displacement: number;
+  // drive: string;
+  // fuel_type: string;
+  // highway_mpg: number;
+  // make: string;
+  // model: string;
+  // transmission: string;
+  // year: number;
+  strCategory: string;
+  dateModified: Date | string;
+  strMeasure1: string;
+  strCreativeCommonsConfirmed: "Yes" | "No";
 }
 
 export interface FilterProps {
@@ -28,13 +32,18 @@ export interface HomeProps {
 }
 
 export interface CarCardProps {
-  model: string;
-  make: string;
-  mpg: number;
-  transmission: string;
-  year: number;
-  drive: string;
-  cityMPG: number;
+  car: string;
+  // model: string;
+  // make: string;
+  // mpg: number;
+  // transmission: string;
+  // year: number;
+  // drive: string;
+  // cityMPG: number;
+  strCategory: string;
+  dateModified: Date | string;
+  strMeasure1: string;
+  strCreativeCommonsConfirmed: "Yes" | "No";
 }
 //? attribute is optional
 export interface CustomButtonProps {
